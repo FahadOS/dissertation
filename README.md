@@ -24,12 +24,14 @@ An interim report consists of an outline with a progress update and draft conten
 
 **Examples of Good Interim Reports** 
 The following samples are the main bodies of "good" interim reports selected from various years:
-+ [Vehicle Hot Spot Identification on Data Streams, Rebecca Tickle]() 
-+ [The Swift Instant Messenger, Marcin Wisniowski]()
-+ [Impacts of [stuff] on human faces, Humaira Ahmed]()
-+ [Monadic streams library, goat Chris Purdy]()
++ [Vehicle Hot Spot Identification on Data Streams, Rebecca Tickle](https://moodle.nottingham.ac.uk/pluginfile.php/9984128/mod_folder/content/0/Timothy_Cargan_interim_report.pdf?forcedownload=1) 
++ [The Swift Instant Messenger, Marcin Wisniowski](https://moodle.nottingham.ac.uk/pluginfile.php/9984128/mod_folder/content/0/Aidan_Reed_Interim_Report.pdf?forcedownload=1)
++ [Impacts of [stuff] on human faces, Humaira Ahmed](https://moodle.nottingham.ac.uk/pluginfile.php/9984128/mod_folder/content/0/Jay_Mehta_interim_report.pdf?forcedownload=1)
++ [Monadic streams library, goat Chris Purdy](https://moodle.nottingham.ac.uk/pluginfile.php/9984128/mod_folder/content/0/Eskil_Gjerde_interim_report.pdf?forcedownload=1)
 
 ## Marking
-Interim RUBRIC
-The interim report is marked by the supervisor only [10%]. Considering that the work is in progress, a subset of the relevant dissertation marking criteria (e.g., technical writing skills, appropriateness of the aim and objectives, knowledge on the subject area and topic, critical thinking skills, progress and plan) will be used in the assessment. Evidence should be available of substantial work having taken place, leading to good progress towards the end of the semester against the project plan the students were to have handed in by the deadline. Any reason for being behind plan should be explained through good reflective reasoning (not working hard enough doesn't cut it...)
-This rubric provides a set of guidelines outlining the typical requirements of specific grade band for the interim reports. It is not necessary that a project exhibit all the criteria listed in each grade given below to fall within that band. The characteristics of each band are merely representative of that grade. The balance between various aspects of the particular work will be considered during assessment. The supervisor will provide a written feedback justifying the final mark.
+[Interim RUBRIC 10%](https://moodle.nottingham.ac.uk/pluginfile.php/9984128/mod_folder/content/0/InterimReportMarkingRubric.pdf?forcedownload=1) 
+
+Considering that the work is in progress, a subset of the relevant dissertation marking criteria (e.g., technical writing skills, appropriateness of the aim and objectives, knowledge on the subject area and topic, critical thinking skills, progress and plan) will be used in the assessment. Evidence should be available of substantial work having taken place, leading to good progress towards the end of the semester against the project plan the students were to have handed in by the deadline. Any reason for being behind plan should be explained through good reflective reasoning (not working hard enough doesn't cut it...)
+
+The rubric provides a set of guidelines outlining the typical requirements of specific grade band for the interim reports. It is not necessary that a project exhibit all the criteria listed in each grade given below to fall within that band. The characteristics of each band are merely representative of that grade. The balance between various aspects of the particular work will be considered during assessment. The supervisor will provide a written feedback justifying the final mark.
