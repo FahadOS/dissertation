@@ -27,10 +27,13 @@ There is a suggested maximum limit of 5000 words without exceeding 15 pages (A4 
 
 ### Examples of Good Interim Reports 
 The following samples are the main bodies of "good" interim reports selected from various years:
-+ [Vehicle Hot Spot Identification on Data Streams, Rebecca Tickle](https://moodle.nottingham.ac.uk/pluginfile.php/9984128/mod_folder/content/0/Timothy_Cargan_interim_report.pdf?forcedownload=1) 
-+ [The Swift Instant Messenger, Marcin Wisniowski](https://moodle.nottingham.ac.uk/pluginfile.php/9984128/mod_folder/content/0/Aidan_Reed_Interim_Report.pdf?forcedownload=1)
-+ [Impacts of [stuff] on human faces, Humaira Ahmed](https://moodle.nottingham.ac.uk/pluginfile.php/9984128/mod_folder/content/0/Jay_Mehta_interim_report.pdf?forcedownload=1)
-+ [Monadic streams library, goat Chris Purdy](https://moodle.nottingham.ac.uk/pluginfile.php/9984128/mod_folder/content/0/Eskil_Gjerde_interim_report.pdf?forcedownload=1)
+- [Predicting Solar Irradiance, Timothy Cargan](https://moodle.nottingham.ac.uk/pluginfile.php/9984128/mod_folder/content/0/Timothy_Cargan_interim_report.pdf?forcedownload=0)
+- [Scheduling and Optimisation of IT Support Incidents, Aidan Reed]()
+- [Machine Learning for Market Prediction, Jay Mehta]() 
+- [A Data-Driven Approach to Bus Timetable Optimisation, Jonathan Foot]()
+- [Novel Approaches for Optimal Control of Battery Storage, Eskil Sulen Gjerde]()
+- [Improving Selection Based on their Search Behaviour, Jack Cakebread]()
+- [Predicting Key Presses over Video Calls using Machine Learning, Adam Masters]()
 
 ## Marking
 [Interim RUBRIC 10%](https://moodle.nottingham.ac.uk/pluginfile.php/9984128/mod_folder/content/0/InterimReportMarkingRubric.pdf?forcedownload=1) 
