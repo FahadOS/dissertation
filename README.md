@@ -28,12 +28,12 @@ There is a suggested maximum limit of 5000 words without exceeding 15 pages (A4 
 ### Examples of Good Interim Reports 
 The following samples are the main bodies of "good" interim reports selected from various years:
 - [Predicting Solar Irradiance, Timothy Cargan](https://moodle.nottingham.ac.uk/pluginfile.php/9984128/mod_folder/content/0/Timothy_Cargan_interim_report.pdf?forcedownload=0)
-- [Scheduling and Optimisation of IT Support Incidents, Aidan Reed]()
-- [Machine Learning for Market Prediction, Jay Mehta]() 
-- [A Data-Driven Approach to Bus Timetable Optimisation, Jonathan Foot]()
-- [Novel Approaches for Optimal Control of Battery Storage, Eskil Sulen Gjerde]()
-- [Improving Selection Based on their Search Behaviour, Jack Cakebread]()
-- [Predicting Key Presses over Video Calls using Machine Learning, Adam Masters]()
+- [Scheduling and Optimisation of IT Support Incidents, Aidan Reed](https://moodle.nottingham.ac.uk/pluginfile.php/9984128/mod_folder/content/0/Aidan_Reed_Interim_Report.pdf?forcedownload=0)
+- [Machine Learning for Market Prediction, Jay Mehta](https://moodle.nottingham.ac.uk/pluginfile.php/9984128/mod_folder/content/0/Jay_Mehta_interim_report.pdf?forcedownload=1) 
+- [A Data-Driven Approach to Bus Timetable Optimisation, Jonathan Foot](https://moodle.nottingham.ac.uk/pluginfile.php/9984128/mod_folder/content/0/Jonathan_Foot_interim_report.pdf?forcedownload=1)
+- [Novel Approaches for Optimal Control of Battery Storage, Eskil Sulen Gjerde](https://moodle.nottingham.ac.uk/pluginfile.php/9984128/mod_folder/content/0/Eskil_Gjerde_interim_report.pdf?forcedownload=1)
+- [Improving Selection Based on their Search Behaviour, Jack Cakebread](https://moodle.nottingham.ac.uk/pluginfile.php/9984128/mod_folder/content/0/JC_interim_Report1.pdf?forcedownload=1)
+- [Predicting Key Presses over Video Calls using Machine Learning, Adam Masters](https://moodle.nottingham.ac.uk/pluginfile.php/9984128/mod_folder/content/0/AM_interim_report_21_22.pdf?forcedownload=1)
 
 ## Marking
 [Interim RUBRIC 10%](https://moodle.nottingham.ac.uk/pluginfile.php/9984128/mod_folder/content/0/InterimReportMarkingRubric.pdf?forcedownload=1) 
