@@ -60,6 +60,24 @@
    numbering: "1.1.",
 )
 
-// #outline()
+#outline()
 
 // MAIN BODY
+
+= Introduction
+very quickly get out of the way the point and what will be achieved.
+
+== Motivation
+probably can copy over from proposal, but be careful to be clearer about the prorgram
+
+== Related Work
+-> focus on this, need to consolodate research here 
+
+== Aims and Objectives
+can be the same, but more indepth for the project (individual aspects more clear)
+
+#pagebreak()
+
+= 
+
+== Technical
