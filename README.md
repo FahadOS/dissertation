@@ -7,14 +7,14 @@ Current goal is to somehow consolodate 4 weeks worth of research like now
 
 # Interim Report
 An interim report consists of an outline with a progress update and draft content. The following is a typical interim report structure provided as guidance and this varies depending on the nature of the project. A brief description of each component can be found in the Dissertation section below. Please discuss your interim report with your supervisor before submission.
-- Introduction (aims and objectives, overall project intentions)
-- Motivation (explaining problem being solved, and its importance)
-- Related work (what the project does that is better, or new in the field)
-- Description of the work (what project achieves, how it functions, perhaps technical spec)
-- Methodology (research methods, they should end up justifying choices, and be with evidence)
-- Design (Description/showing the design and how it solves the problem)
-- Implementation (comprehensive description of software including langs, platform, problems and solutions)
-- Progress (described below in project management)
+- **Introduction** (aims and objectives, overall project intentions)
+- **Motivation** (explaining problem being solved, and its importance)
+- **Related work** (what the project does that is better, or new in the field)
+- **Description** of the work (what project achieves, how it functions, perhaps technical spec)
+- **Methodology** (research methods, they should end up justifying choices, and be with evidence)
+- **Design** (Description/showing the design and how it solves the problem)
+- **Implementations** (comprehensive description of software including langs, platform, problems and solutions)
+- **Progress** (described below in project management)
 
 ### Project management 
 Covering the tasks as a part of your work plan as presented in your final proposal and progress as well as how time and resources are managed. The need for reviewing the tasks and explanation of/reasons for any adjustment made to the future work plan. Inclusion of a Gantt chart is strongly recommended as a visual indicating the progress of the project.
