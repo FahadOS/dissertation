@@ -97,3 +97,8 @@ can be the same, but more indepth for the project (individual aspects more clear
 == Technical Breakdown
 
 == Optimisation Tools
+
+#pagebreak()
+= Bibliography
+// #bibliography("sources.bib",style: "harvard-cite-them-right", title: none)
+#bibliography("references.bib", style: "ieee", title: none)
