@@ -92,11 +92,19 @@ can be the same, but more indepth for the project (individual aspects more clear
 
 #pagebreak()
 
-= Project Description
 
-== Technical Breakdown
+== Technical Background
+-> quick overview on memory addresses and registers then c, rust, c++ here. garbage collectors and performance 
 
-== Optimisation Tools
+=== C Family Memory Management
+
+=== Rust Memory Management
+
+== Benchmarking Approach
+
+=== Optimisation Tools
+
+//= Project Description
 
 #pagebreak()
 = Bibliography
