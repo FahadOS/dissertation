@@ -92,11 +92,11 @@ can be the same, but more indepth for the project (individual aspects more clear
 #pagebreak()
 
 = Technical Background
--> quick overview on memory addresses and registers then c, rust, c++ here. garbage collectors and performance 
+-> quick overview on memory addresses and registers then C, Rust, C++ here. garbage collectors and performance 
 
 == Evaluating Languages for Kernel Programming
 -> what do we need to go over for each contender, rule out garbage collected languages here.
--> need to address alternatives to speed, such as kernel panics, Common Vulnerabilities and Exposures. 'unsafe' :wa.
+-> need to address alternatives to speed, such as kernel panics, Common Vulnerabilities and Exposures. 'unsafe' .
 
 === Non-Deterministic Latency Problem
 
