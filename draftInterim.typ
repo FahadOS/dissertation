@@ -96,9 +96,14 @@ can be the same, but more indepth for the project (individual aspects more clear
 
 == Evaluating Languages for Kernel Programming
 -> what do we need to go over for each contender, rule out garbage collected languages here.
--> need to address alternatives to speed, such as kernel panics, Common Vulnerabilities and Exposures. 'unsafe' .
+-> need to address alternatives to speed, such as kernel panics, Common Vulnerabilities and Exposures. 'unsafe'.
 
 === Non-Deterministic Latency Problem
+
+=== Zero Cost Abstraction
+
+=== Garbage Collection
+
 
 == The C Language Family and Linux
 
@@ -106,22 +111,21 @@ can be the same, but more indepth for the project (individual aspects more clear
 
 === Concurrency Issues
 
-=== Garbage Collectors
+=== C as a Benchmark
+C is the main base to compare Rust with, the best to benchmark speed, kernel panics etc with.
 
-=== Conclusion
-C is the main base to compare Rust with, the best to benchmark speed, kernel panics etc with. 
 
-== Rust Memory Management
+== Rust
 
-=== Ownership
-
-=== Memory Lifetime
-
-=== Smart Pointers
+=== Memory Management
 
 === 'unsafe' block
 
+=== Measuring Advantages
+
+
 #pagebreak()
+
 
 = Project Description
 
