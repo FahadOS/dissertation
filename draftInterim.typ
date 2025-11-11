@@ -95,8 +95,12 @@ can be the same, but more indepth for the project (individual aspects more clear
 -> quick overview on memory addresses and registers then C, Rust, C++ here. garbage collectors and performance 
 
 == Evaluating Languages for Kernel Programming
--> what do we need to go over for each contender, rule out garbage collected languages here.
--> need to address alternatives to speed, such as kernel panics, Common Vulnerabilities and Exposures. 'unsafe'.
+// -> what do we need to go over for each contender, rule out garbage collected languages here.
+// -> need to address alternatives to speed, such as kernel panics, Common Vulnerabilities and Exposures. 'unsafe'.
+
+When evaluating Rust as a programming language for Linux, we must first address what specifically is advantageous in a language that would be in Linux, or kernels as a whole. Historically, the primary metrics have been raw performance and direct, low-level memory control, which C has long provided @Panter2024. 
+
+
 
 === Non-Deterministic Latency Problem
 
@@ -119,13 +123,12 @@ C is the main base to compare Rust with, the best to benchmark speed, kernel pan
 
 === Memory Management
 
-=== 'unsafe' block
+=== Unsafe Block
 
 === Measuring Advantages
 
 
 #pagebreak()
-
 
 = Project Description
 
