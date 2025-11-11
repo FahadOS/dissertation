@@ -98,9 +98,7 @@ can be the same, but more indepth for the project (individual aspects more clear
 // -> what do we need to go over for each contender, rule out garbage collected languages here.
 // -> need to address alternatives to speed, such as kernel panics, Common Vulnerabilities and Exposures. 'unsafe'.
 
-When evaluating Rust as a programming language for Linux, we must first address what specifically is advantageous in a language that would be in Linux, or kernels as a whole. Historically, the primary metrics have been raw performance and direct, low-level memory control, which C has long provided @Panter2024. 
-
-
+Evaluating Rust's suitability as a language for the Linux kernel first requires establishing a clear set of criteria for what makes any language advantageous in this unique, high-stakes environment. Historically, the primary metrics have been raw performance and direct, low-level memory control, which C has long provided, as it was crucial for kernel development @Panter2024. This stringent performance requirement, specifically the need for deterministic latency, immediately rules out languages reliant on garbage collection. However, a purely performance-centric evaluation is no longer sufficient; the prevalence of kernel panics and Common Vulnerabilities and Exposures (CVEs) linked to C's memory model has shifted the focus. Therefore, a modern evaluation must also heavily weigh a language's ability to provide provable safety guarantees while still achieving seamless interoperability with the existing C codebase—a significant challenge that involves managing the boundary between safe and unsafe code. This section will establish these key benchmarks to evaluate the main contenders.
 
 === Non-Deterministic Latency Problem
 
