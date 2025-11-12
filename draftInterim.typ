@@ -48,7 +48,7 @@
 
 #set par(
   justify: true,
-  first-line-indent: 0.5in,
+  first-line-indent: 0.4in,
   leading: 0.65em
 )
 
@@ -61,16 +61,15 @@
 )
 
 #outline()
+#pagebreak()
 
 // MAIN BODY
 
 = Introduction
-very quickly get out of the way the point and what will be achieved.
-
-add a quick paragraph on exactly how optimisation is difficult. how something on many machines, optimisation needs to be perfect. how developing memory-safe easily can really help. 
+very quickly get out of the way the point and what will be achieved. add a quick paragraph on exactly how optimisation is difficult. how something on many machines, optimisation needs to be perfect. how developing memory-safe easily can really help. 
 
 == Context and Motivation
-*copied over from proposal, but be careful to be clearer about the program*
+// copied over from proposal, but be careful to be clearer about the program
 
 Linux is an operating system that runs on billions of computers worldwide, with its underlying kernel worked on by thousands of individuals. Unlike its prominent market competitors, the ongoing development effort is open-source, allowing any individual to view and contribute to the source code. Adopters continue to further advantages such as hardware versatility, security and all-encompassing software utility @Siever2005. For example, the kernel modularises processor-specific code, allowing it to be compiled and ported to any processor. This allows Linux to be run across a great variety of network architectures and embedded systems, which take advantage of its powerful system capability @Abbott2018. Linux's growing capital and market share have increased interest and contribution from large corporations, such as Google and Intel, becoming dependants @West2001. Given the scale of development and sheer prevalence of Linux distributions worldwide, questions are naturally raised about the safety and maintainability of the kernel. 
 
@@ -92,13 +91,14 @@ can be the same, but more indepth for the project (individual aspects more clear
 #pagebreak()
 
 = Technical Background
--> quick overview on memory addresses and registers then C, Rust, C++ here. garbage collectors and performance 
+// -> quick overview on memory addresses and registers then C, Rust, C++ here. garbage collectors and performance 
+This section will establish the necessary technical background and definitions used for the software project. To effectively quantify Rust's effectiveness as a language within Linux, it is essential to analyse what properties of a programming language are advantages for kernel development, such as performance and stability. These evaluation metrics also must account for C being the incumbent language within the Kernel, which has significant practical consequences for Rust's adoption, such as the challenges of interoperability and long-term maintainability of a codebase with a new language. Conclusively, measuring Rust's advantages in Linux involves systematically analysing these key metrics, and in direct comparison with C whenever possible.
 
 == Evaluating Languages for Kernel Programming
 // -> what do we need to go over for each contender, rule out garbage collected languages here.
 // -> need to address alternatives to speed, such as kernel panics, Common Vulnerabilities and Exposures. 'unsafe'.
 
-Evaluating Rust's suitability as a language for the Linux kernel first requires establishing a clear set of criteria for what makes any language advantageous in this unique, high-stakes environment. Historically, the primary metrics have been raw performance and direct, low-level memory control, which C has long provided, as it was crucial for kernel development @Panter2024. This stringent performance requirement, specifically the need for deterministic latency, immediately rules out languages reliant on garbage collection. However, a purely performance-centric evaluation is no longer sufficient; the prevalence of kernel panics and Common Vulnerabilities and Exposures (CVEs) linked to C's memory model has shifted the focus. Therefore, a modern evaluation must also heavily weigh a language's ability to provide provable safety guarantees while still achieving seamless interoperability with the existing C codebase—a significant challenge that involves managing the boundary between safe and unsafe code. This section will establish these key benchmarks to evaluate the main contenders.
+Evaluating Rust's suitability as a language for the Linux kernel first requires establishing a clear set of criteria for what makes any language advantageous in these environments. Historically, the primary metrics have been raw performance and direct, low-level memory control, which C has long provided, as it was crucial for kernel development @Panter2024. This stringent performance requirement, specifically the need for deterministic latency, immediately rules out languages reliant on garbage collection. 
 
 === Non-Deterministic Latency Problem
 
@@ -117,7 +117,7 @@ Evaluating Rust's suitability as a language for the Linux kernel first requires 
 C is the main base to compare Rust with, the best to benchmark speed, kernel panics etc with.
 
 
-== Rust
+== Rust for Linux
 
 === Memory Management
 
