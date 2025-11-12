@@ -92,13 +92,13 @@ can be the same, but more indepth for the project (individual aspects more clear
 
 = Technical Background
 // -> quick overview on memory addresses and registers then C, Rust, C++ here. garbage collectors and performance 
-This section will establish the necessary technical background and definitions used for the software project. To effectively quantify Rust's effectiveness as a language within Linux, it is essential to analyse what properties of a programming language are advantages for kernel development, such as performance and stability. These evaluation metrics also must account for C being the incumbent language within the Kernel, which has significant practical consequences for Rust's adoption, such as the challenges of interoperability and long-term maintainability of a codebase with a new language. Conclusively, measuring Rust's advantages in Linux involves systematically analysing these key metrics, and in direct comparison with C whenever possible.
+This section will establish the necessary technical background and definitions used for the software project. To effectively quantify Rust's effectiveness as a language within Linux, it is essential to analyse what properties of a programming language are advantageous for kernel development such as performance and stability. These evaluation metrics also must account for C being the incumbent language within the Kernel, which has significant practical consequences for Rust's adoption, such as the challenges of interoperability and long-term maintainability of a codebase with a new language. Conclusively, measuring Rust's advantages in Linux involves systematically analysing these key metrics, and in direct comparison with C whenever possible.
 
 == Evaluating Languages for Kernel Programming
 // -> what do we need to go over for each contender, rule out garbage collected languages here.
 // -> need to address alternatives to speed, such as kernel panics, Common Vulnerabilities and Exposures. 'unsafe'.
 
-Evaluating Rust's suitability as a language for the Linux kernel first requires establishing a clear set of criteria for what makes any language advantageous in these environments. Historically, the primary metrics have been raw performance and direct, low-level memory control, which C has long provided, as it was crucial for kernel development @Panter2024. This stringent performance requirement, specifically the need for deterministic latency, immediately rules out languages reliant on garbage collection. 
+Historically, the primary metrics have been raw performance and direct, low-level memory control, which C has long provided, as it was crucial for kernel development @Panter2024. This stringent performance requirement, specifically the need for deterministic latency, immediately rules out languages reliant on garbage collection. 
 
 === Non-Deterministic Latency Problem
 
@@ -149,3 +149,7 @@ C is the main base to compare Rust with, the best to benchmark speed, kernel pan
 = Bibliography
 // #bibliography("sources.bib", style: "apa", title: none)
 #bibliography("references.bib", style: "ieee", title: none)
+
+#word-count(total => [
+  The number of words in this is #total-words
+])
