@@ -4,7 +4,7 @@
 
 #set text(
   font: "Times New Roman",
-   size: 12pt,
+   size: 11pt,
    lang: "en",
  )
 
@@ -59,6 +59,7 @@
 #set heading(
    numbering: "1.1",
 )
+#show selector(<nonumber>): set heading(numbering: none)
 
 #outline()
 #pagebreak()
@@ -80,7 +81,7 @@ Rust now becomes the main contender for Linux development, a modern systems prog
 To carefully address these concerns, this project will produce a software suite to assess Rust's practical advantages within the Linux kernel. An automated framework will benchmark performance by executing a comparative suite that tests Rust modules provided by the user against other languages and variables. 
 
 == Related Work
-Extensive related work has focused on quantitative performance benchmarks between Rust and C, with findings largely indicating that Rust introduces performance overhead and does not eliminate all bug classes @Chen2022 @Garber2025. 
+Extensive related work has focused on quantitative performance benchmarks between Rust and C, with findings largely indicating that Rust introduces performance overhead and does not eliminate all bug classes @Chen2022 @Garber2025. could even mention the United States' Biden Administration 2024 report on using memory safe languages, "Future Software should be Memory-Safe" 
 
 === Research Gap
 There may be a research gap in these assessments of Rust's advantages, as purely quantifying overhead is insufficient to capture the full trade-off, and the project will address this by including evaluation of high-level abstractions and built-in safety guarantees.
@@ -92,19 +93,20 @@ can be the same, but more indepth for the project (individual aspects more clear
 
 = Technical Background
 // -> quick overview on memory addresses and registers then C, Rust, C++ here. garbage collectors and performance 
-This section will establish the necessary technical background and definitions used for the software project. To effectively quantify Rust's effectiveness as a language within Linux, it is essential to analyse what properties of a programming language are advantageous for kernel development such as performance and stability. These evaluation metrics also must account for C being the incumbent language within the Kernel, which has significant practical consequences for Rust's adoption, such as the challenges of interoperability and long-term maintainability of a codebase with a new language. Conclusively, measuring Rust's advantages in Linux involves systematically analysing these key metrics, and in direct comparison with C whenever possible.
+This section will establish the necessary technical background and definitions used for the software project. To effectively quantify Rust's effectiveness as a language within Linux, it is essential to analyse what properties of a programming language are advantageous for kernel development such as performance and stability. These evaluation metrics also must account for C being the incumbent language within the Kernel, which has significant practical consequences for Rust's adoption such as the challenges of interoperability and long-term maintainability of a codebase with a new language. *There are several venues for software analysis such as from a cybersecurity standpoint, yet quickly limitations are set on how to measure such aspects because software is not rigid in a scientific sense, so comparison methods need to be chosen best for empirical anaysis.* Conclusively, measuring Rust's advantages in Linux involves a deep understanding of its abilities, and systematically analysing these key metrics in direct comparison with C whenever possible.
 
 == Evaluating Languages for Kernel Programming
 // -> what do we need to go over for each contender, rule out garbage collected languages here.
 // -> need to address alternatives to speed, such as kernel panics, Common Vulnerabilities and Exposures. 'unsafe'.
 
-Historically, the primary metrics have been raw performance and direct, low-level memory control, which C has long provided, as it was crucial for kernel development @Panter2024. This stringent performance requirement, specifically the need for deterministic latency, immediately rules out languages reliant on garbage collection. 
+=== Challenges and Limitations <nonumber>
 
-=== Non-Deterministic Latency Problem
 
-=== Zero Cost Abstraction
+=== Non-Deterministic Latency Problem <nonumber>
 
-=== Garbage Collection
+=== Zero Cost Abstraction <nonumber>
+
+=== Garbage Collection <nonumber>
 
 
 == The C Language Family and Linux
@@ -121,9 +123,9 @@ C is the main base to compare Rust with, the best to benchmark speed, kernel pan
 
 === Memory Management
 
-=== Unsafe Block
+=== Unsafe Blocks
 
-=== Measuring Advantages
+=== Measuring Maintainability
 
 
 #pagebreak()
