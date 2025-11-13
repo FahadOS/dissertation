@@ -92,30 +92,23 @@ can be the same, but more indepth for the project (individual aspects more clear
 #pagebreak()
 
 = Technical Background
-This section will establish the necessary technical background and definitions used for the software project, which will systemically measure Rust's advantages within Linux. To effectively quantify Rust's effectiveness in this context, it is essential to identify the specific characteristics of programming language that are advantageous for general operating system development. Performance benchmarks will assess how Rust handles these characteristics, with additional tests such as failure rates under adverse conditions. These evaluation metrics also must account for C being the incumbent language within the Kernel, which has significant practical consequences for Rust's adoption and continued integration within Linux. This includes the challenges of interoperability, long-term maintainability and developing a deep understanding of its abilities with direct comparisons to C whenever possible.
+This section will establish the necessary technical background and definitions used for the software project, which will systemically measure Rust's advantages within Linux. To effectively quantify Rust's effectiveness in this context, it is essential to identify the specific characteristics of programming language that are advantageous for general operating system development. Performance benchmarks will assess how Rust handles these characteristics, with additional tests such as failure rates under adverse conditions. These evaluation metrics also must account for C being the incumbent language within the Kernel, which has significant practical consequences for Rust's adoption and continued integration within Linux. This requires assessment of interoperability, long-term maintainability and developing a deep understanding of its abilities with direct comparisons to C whenever possible.
 
 == Evaluating Languages for Kernel Programming
 // -> need to address alternatives to speed, such as kernel panics, Common Vulnerabilities and Exposures. 'unsafe'.
 
-=== Challenges and Goals for Language Evaluation <nonumber>
-// *There are several venues for software analysis such as from a cybersecurity standpoint, yet quickly limitations are set on how to measure such aspects because software is not rigid in a scientific sense, so comparison methods need to be chosen best for empirical anaysis.*
+=== General Requirements <nonumber>
+// -> introduce and explain in technical terms what a kernel needs from a programming language. tie this into non-deterministic latency and garbage collection and maybe even zero cost abstraction, ruling out most languages
 
-Evaluating a new programming language in a kernel context is an inherently difficult problem in software measurability. As highlighted in a NIST workshop, software is not a uniform physical product but more akin to a "form of human expression," which makes quality metrics "highly subjective and context-dependent" @WhiteHouse2024. This challenge is magnified in an operating system kernel, one of the most complex software artifacts. The kernel's intricate interactions with hardware and concurrent processes mean its behaviour is not "entirely deterministic," which, as the report notes, "hinders the capacity to reliably and consistently measure" its true performance and security characteristics @WhiteHouse2024.
+=== Benchmarking Methods <nonumber>
+Evaluating a new programming language in a kernel context is an inherently difficult problem in software measurability. Software is not inherently fit for empirical analysis as its form heavilty relies on the expression of the programmer. This can introduce subjectiveness to quality metrics, as is reported by *good way to name this report* @WhiteHouse2024. This challenge is magnified in an operating system kernel as intricate interactions with hardware and concurrent processes mean its behaviour is not entirely deterministic which, as the report also notes, "hinders the capacity to reliably and consistently measure" its true performance and security characteristics. *The goal is to therefore use industry-accepted empirical metrics alongside carefully planned novel ones to satisfy the research gap.*
 
-This difficulty is compounded by the challenge of analysis. The NIST workshop concludes that traditional methods, such as "counting known vulnerabilities, are insufficient" and not "forward-looking" @WhiteHouse2024. This defines the central research gap: a simple tally of C-based CVEs that Rust might have prevented is not a complete evaluation. A proper assessment must empirically quantify the new, complex trade-offs introduced by the new language—such as the performance cost of its safety abstractions versus its gains in stability. Therefore, this project's "analysis suite" is designed to create a framework for this difficult but necessary empirical analysis, providing new, quantifiable metrics beyond just bug counts.
+Introduce and explain technically, how language speeds are 
 
-// need these subheadings to be more about measuring maintainability
-=== Non-Deterministic Latency Problem <nonumber>
-
-=== Zero Cost Abstraction <nonumber>
-
-=== Garbage Collection <nonumber>
-
-=== need
 
 == The C Language Family and Linux
 
-=== Memory Management
+=== Direct Memory Management
 
 === Concurrency Issues
 
