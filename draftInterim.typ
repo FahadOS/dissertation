@@ -67,7 +67,7 @@
 // MAIN BODY
 
 = Introduction
-very quickly get out of the way the point and what will be achieved. add a quick paragraph on exactly how optimisation is difficult. how something on many machines, optimisation needs to be perfect. how developing memory-safe easily can really help. 
+- very quickly get out of the way the point and what will be achieved. add a quick paragraph on exactly how optimisation is difficult. how something on many machines, optimisation needs to be perfect. how developing memory-safe easily can really help. 
 
 == Context and Motivation
 // copied over from proposal, but be careful to be clearer about the program
@@ -87,7 +87,17 @@ Extensive related work has focused on quantitative performance benchmarks betwee
 There may be a research gap in these assessments of Rust's advantages, as purely quantifying overhead is insufficient to capture the full trade-off, and the project will address this by including evaluation of high-level abstractions and built-in safety guarantees.
 
 == Aims and Objectives
-can be the same, but more indepth for the project (individual aspects more clear)
+- make individual aspects more clear
+
+The aim of this project is to develop an analysis software that assesses the performance of Rust against alternative languages in Linux kernel modules. Crucially, results evaluate and identify key maintainability critera, such as memory safety and abstraction.
+
+
+- The key objectives for this project are to:
+	+ Research and conduct a thorough evaluation of existing methods for performance benchmarking and code analysis in systems-level programming, across various language types.
+	+ Develop a user-friendly software suite, such as a command-line interface, that automates the compilation and execution of modules written in Rust and alternatives.
+	+ Implement a robust analysis engine within the suite that uses empirical data on kernel maintances indicators, in order to facilitate an evaluation of key maintainability criteria.
+	+ Automatically process and present the collected data in a clear, comparative report in order to convey the performance and safety trade-offs between the languages.
+
 
 #pagebreak()
 
@@ -126,11 +136,24 @@ Evaluating a programming language in a kernel context is an inherently difficult
 === C's Memory Management
 // -> direct memory writing, potential for hazards such as dangling pointers. mention how this can be quantified in CVE's.
 
-C’s memory model allows direct manipulation of memory through pointers. A pointer is a variable that stores a memory address, allowing a program to indirectly access or modify the data located there. Programmercan traverse memory, dynamically reference complex data structures, and interface directly with hardware registers. Through pointer arithmetic and explicit allocation functions such as malloc() and free(), programmers can determine exactly where and when memory is created or released. This model eliminates any form of automatic garbage collection and avoids the indeterminate pauses associated with managed runtimes, meeting the deterministic property in kernel and embedded development. The ability to manually control allocation and object lifetime allows the Linux kernel to achieve predictable latency and fine-grained optimisation at the cost of significantly increasing the programmer’s responsibility for correctness @Ritchie1978.
+C’s memory model allows direct manipulation of memory through pointers. A pointer is a variable that stores a memory address, allowing a program to indirectly access or modify the data located there. Programmers can therefore traverse memory, dynamically reference complex data structures, and interface directly with hardware registers. Through pointer arithmetic and explicit allocation functions such as malloc() and free(), one can also determine exactly where and when memory is created or released. This model eliminates any form of automatic garbage collection and avoids the indeterminate pauses associated with managed runtimes, meeting the deterministic property in kernel and embedded development. The ability to manually control allocation and object lifetime allows the Linux kernel to achieve predictable latency and fine-grained optimisation at the cost of significantly increasing the programmer’s responsibility for correctness @Ritchie1978.
 
-However, this same flexibility makes memory management in C both error-prone and unsafe by modern standards. Because the compiler performs minimal safety checking, even subtle mistakes in pointer usage can corrupt critical memory regions or compromise process isolation. Common errors include dangling pointers, where memory is freed while still being referenced elsewhere; buffer overflows, which occur when writes exceed allocated bounds; and double frees, where deallocated memory is erroneously released a second time. Each of these can lead to undefined behaviour, system instability, or exploitable security vulnerabilities. Studies of Linux kernel vulnerabilities consistently show that a large majority originate from such memory handling errors, as reflected in Common Vulnerabilities and Exposures (CVE) reports. These issues are notoriously difficult to detect through testing alone, since incorrect memory access may not immediately manifest as a visible fault but can propagate silently until triggering a crash or privilege escalation.
 
-In practice, the C language provides no intrinsic mechanism for enforcing ownership, tracking lifetimes, or validating aliasing between pointers. The compiler assumes the programmer has full knowledge of which objects are valid and accessible at any given time, leaving correctness dependent on discipline, conventions, and manual review. While static analysis tools and runtime sanitizers can mitigate some risks, they cannot remove the fundamental unsafety of C’s model. This manual approach defines both the power and the fragility of C: it enables unparalleled optimisation and precise control over kernel memory layout, yet remains a persistent source of vulnerabilities and maintainability challenges @Gay2007. These characteristics form the technical baseline against which Rust’s automated ownership model and safety guarantees will later be compared.
+```c
+int value = 10;
+int *p = &value;      // p stores the address of 'value'
+printf("%d\n", *p);   // Dereference to access data at that address
+
+
+p = malloc(sizeof(int));
+*p = 42;              // Pointer Assignment
+free(p);              // Memory Released
+*p = 7;               // Dangling Pointer: undefined behaviour
+p = NULL;             // Manually reset pointer to avoid dangling pointer error
+```
+
+
+However, this same flexibility makes memory management in C both error-prone and unsafe by modern standards. Because the compiler performs minimal safety checking, even subtle mistakes in pointer usage can corrupt critical memory regions or compromise process isolation. Common errors include dangling pointers, where memory is freed while still being referenced elsewhere; buffer overflows, which occur when writes exceed allocated bounds; and double frees, where deallocated memory is erroneously released a second time. Each of these can lead to undefined behaviour, system instability, or exploitable security vulnerabilities. These issues are notoriously difficult to detect through testing alone, since incorrect memory access may not immediately manifest as a visible fault but can propagate silently until triggering a crash or privilege escalation. @WhiteHouse2024 Also, the C language provides no intrinsic mechanism for enforcing ownership, tracking lifetimes, or validating aliasing between pointers. The design assumes the programmer has full knowledge of which objects are valid and accessible at any given time, leaving correctness dependent on discipline, conventions, and manual review. While static analysis tools and runtime sanitizers can mitigate some risks, they cannot remove the fundamental unsafety of C’s model. This gives us the overall trade-off for C, precise control over kernel memory layout for optimisation, which itself is a source of vulnerabilities and maintainability challenges @Gay2007.
 
 === Concurrency, and such Issues
 // -> introduce and explain technically data races, C concurrency and how it works. issues being hard for certain modules where concurrency is very prevalent. 
