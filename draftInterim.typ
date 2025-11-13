@@ -98,32 +98,44 @@ This section will establish the necessary technical background and definitions u
 // -> need to address alternatives to speed, such as kernel panics, Common Vulnerabilities and Exposures. 'unsafe'.
 
 === General Requirements <nonumber>
-// -> introduce and explain in technical terms what a kernel needs from a programming language. tie this into non-deterministic latency and garbage collection and maybe even zero cost abstraction, ruling out most languages
+- introduce and explain in technical terms what a kernel needs from a programming language. tie this into non-deterministic latency and garbage collection and maybe even zero cost abstraction, ruling out most languages
+- deterministic latency (real-time constraints)
+- no garbage collection / manual control of allocation
+- zero-cost abstractions & predictable code generation
+- low runtime overhead / minimal runtime footprint
+- fine-grained memory layout control & aliasing model
+- safe concurrency primitives or provable absence of data races
+- interoperability with existing C ABI and kernel build system
+
 
 === Benchmarking Methods <nonumber>
-Evaluating a new programming language in a kernel context is an inherently difficult problem in software measurability. Software is not inherently fit for empirical analysis as its form heavilty relies on the expression of the programmer. This can introduce subjectiveness to quality metrics, as is reported by *good way to name this report* @WhiteHouse2024. This challenge is magnified in an operating system kernel as intricate interactions with hardware and concurrent processes mean its behaviour is not entirely deterministic which, as the report also notes, "hinders the capacity to reliably and consistently measure" its true performance and security characteristics. *The goal is to therefore use industry-accepted empirical metrics alongside carefully planned novel ones to satisfy the research gap.*
+Evaluating a programming language in a kernel context is an inherently difficult problem in software measurability. Software is not inherently fit for empirical analysis as its form heavilty relies on the expression of the programmer. This can introduce subjectiveness to quality metrics, as is reported by *good way to name this report* @WhiteHouse2024. This challenge is magnified in an operating system kernel as intricate interactions with hardware and concurrent processes mean its behaviour is not entirely deterministic which, as the report also notes, "hinders the capacity to reliably and consistently measure" its true performance and security characteristics. The goal is to therefore use industry-accepted empirical metrics alongside carefully planned novel ones to satisfy the research gap.
 
-Introduce and explain technically, how language speeds are 
+- Introduce and explain technically, how languages are benchmarked performance-wise. explain why the technical limitations are there, insert from above paragraph  
 
 
 == The C Language Family and Linux
+- Once proper language requirements are added, write in certain features how it suites/violates them. also specific benchmarking once that's there
 
-=== Direct Memory Management
+=== C's Memory Management
+// -> direct memory writing, potential for hazards such as dangling pointers. mention how this can be quantified in CVE's. 
 
-=== Concurrency Issues
+=== Concurrency, and such Issues
+// -> introduce and explain technically data races, C concurrency and how it works. issues being hard for certain modules where concurrency is very prevalent. 
 
-=== C as a Benchmark
-C is the main base to compare Rust with, the best to benchmark speed, kernel panics etc with.
-
+=== C as the Standard
+why C is the main base to compare Rust with, the best to benchmark speed, kernel panics etc with.
 
 == Rust for Linux
 
-=== Memory Management
+=== Rust's Memory Management
+// -> introduce and explain in technical terms, ownership, memory lifetime, smart pointers.
 
 === Unsafe Blocks
+// -> explain how unsafe works. 
 
-=== Measuring Maintainability
-
+=== Potential Extra Benchmarking Methods for Rust
+*-> explain how i intend to benchmark rust code with the subjective maintainability criteria*
 
 #pagebreak()
 
