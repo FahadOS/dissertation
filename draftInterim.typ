@@ -100,16 +100,21 @@ This section will establish the necessary technical background and definitions u
 === General Requirements <nonumber>
 - introduce and explain in technical terms what a kernel needs from a programming language. tie this into non-deterministic latency and garbage collection and maybe even zero cost abstraction, ruling out most languages
 - deterministic latency (real-time constraints)
-- no garbage collection / manual control of allocation
+- no garbage collection / manual control of allocation @Chang2010
 - zero-cost abstractions & predictable code generation
 - low runtime overhead / minimal runtime footprint
 - fine-grained memory layout control & aliasing model
 - safe concurrency primitives or provable absence of data races
 - interoperability with existing C ABI and kernel build system
 
+current sources to fit in:
+- making an enhanced kernel, highlights good/bad aspects @Shao2015
+- improving the linux kernel itself, involved languages @Saha2011
+- ruling out high level languages @Cutler2018
+
 
 === Benchmarking Methods <nonumber>
-Evaluating a programming language in a kernel context is an inherently difficult problem in software measurability. Software is not inherently fit for empirical analysis as its form heavilty relies on the expression of the programmer. This can introduce subjectiveness to quality metrics, as is reported by *good way to name this report* @WhiteHouse2024. This challenge is magnified in an operating system kernel as intricate interactions with hardware and concurrent processes mean its behaviour is not entirely deterministic which, as the report also notes, "hinders the capacity to reliably and consistently measure" its true performance and security characteristics. The goal is to therefore use industry-accepted empirical metrics alongside carefully planned novel ones to satisfy the research gap.
+Evaluating a programming language in a kernel context is an inherently difficult problem in software measurability. Software is not inherently fit for empirical analysis as its form heavily relies on the expression of the programmer. This can introduce subjectivity to quality metrics, as is reported for future memory safety by United States Office of the National Cyber Director @WhiteHouse2024. This challenge is magnified in an operating system kernel as intricate interactions with hardware and concurrent processes mean its behaviour is not entirely deterministic which, as the report also notes, "hinders the capacity to reliably and consistently measure" its true performance and security characteristics. The goal is to therefore use industry-accepted empirical metrics alongside carefully planned novel ones to satisfy the research gap.
 
 - Introduce and explain technically, how languages are benchmarked performance-wise. explain why the technical limitations are there, insert from above paragraph  
 
